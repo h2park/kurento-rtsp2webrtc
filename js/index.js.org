@@ -44,7 +44,7 @@ window.addEventListener('load', function(){
   console = new Console('console', console);
 	var videoOutput = document.getElementById('videoOutput');
 	var address = document.getElementById('address');
-	address.value = 'rtsp://user1:12345@192.168.77.170:554/Streaming/Channels/1?transportmode=unicast&profile=Profile_1';
+	address.value = 'http://files.kurento.org/video/puerta-del-sol.ts';
   var pipeline;
   var webRtcPeer;
 
@@ -53,8 +53,6 @@ window.addEventListener('load', function(){
 
   stopButton = document.getElementById('stop');
   stopButton.addEventListener('click', stop);
-  
-  start();
 
   function start() {
   	if(!address.value){
